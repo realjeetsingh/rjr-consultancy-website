@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJR Consultancy - Business Growth Experts in Delhi NCR</title>
+    <meta name="description" content="Performance-driven business growth consultancy helping local businesses in Delhi-NCR scale and thrive. Expert consultation, marketing, and growth strategies.">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <h2>RJR Consultancy</h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero-section active">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Empowering Local Businesses to Reach Their Full Potential</h1>
+                <p class="hero-subtitle">Performance-driven business growth consultancy dedicated to helping local businesses, especially in Delhi-NCR, scale and thrive.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Businesses Scaled</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>300%</h3>
+                        <p>Average Growth Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>₹2Cr+</h3>
+                        <p>Revenue Generated</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3 Years</h3>
+                        <p>Proven Experience</p>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <button class="btn btn--primary btn--lg" onclick="showSection('contact')">Book Free Growth Audit</button>
+                    <a href="https://wa.me/919599863263" target="_blank" class="btn btn--secondary btn--lg">WhatsApp Us Now</a>
+                </div>
+            </div>
+            
+            <div class="hero-services">
+                <h3>Our Core Services</h3>
+                <div class="service-preview">
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h4>Business Strategy</h4>
+                        <p>Personalized growth strategies</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📢</div>
+                        <h4>Lead Generation</h4>
+                        <p>Consistent quality leads</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h4>Sales Automation</h4>
+                        <p>Streamlined sales funnels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About RJR Consultancy</h2>
+                <p>Born from success in fitness industry, now empowering all local businesses</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="founder-story">
+                    <div class="founder-info">
+                        <h3>Jeet Singh</h3>
+                        <p class="founder-title">Founder & Growth Strategist</p>
+                        <p class="founder-bio">RJR Consultancy was born out of our extensive experience managing and scaling fitness centers. Over the past few years, we've helped gyms grow exponentially—by revamping their sales funnels, improving lead capture, automating customer engagement, and boosting footfall with proven marketing techniques. Now, we're on a mission to expand this impact beyond the fitness industry to empower small and mid-sized businesses across Delhi NCR.</p>
+                    </div>
+                </div>
+                
+                <div class="mission-values">
+                    <div class="mission">
+                        <h4>Our Mission</h4>
+                        <p>To help local businesses unlock their growth potential through data-driven strategies, innovative marketing techniques, and proven business systems.</p>
+                    </div>
+                    <div class="values">
+                        <h4>Our Values</h4>
+                        <ul>
+                            <li>Results-driven approach with measurable outcomes</li>
+                            <li>Personalized solutions for each business's unique needs</li>
+                            <li>Transparent communication and honest partnerships</li>
+                            <li>Continuous learning and adaptation to market changes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions to accelerate your business growth</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon-large">📈</div>
+                    <h3>Business Consultation & Growth Strategy</h3>
+                    <p>Personalized one-on-one sessions to diagnose business bottlenecks and craft scalable strategies tailored for your industry and market position.</p>
+                </div>
+                
+                <div class="service-detail-card">
+                    <div class="service-icon-large">📢</div>
+                    <h3>Marketing & Lead Generation</h3>
+                    <p>Paid ad campaigns (Instagram/Meta), local SEO optimization, CRM integration, and WhatsApp automation setup to generate consistent leads.</p>
+                </div>
+                
+                <div class="service-detail-card">
+                    <div class="service-icon-large">⚡</div>
+                    <h3>Sales Funnel Building & Automation</h3>
+                    <p>Tools and systems to streamline inquiries, automate follow-ups, optimize appointment booking, and close leads more efficiently.</p>
+                </div>
+                
+                <div class="service-detail-card">
+                    <div class="service-icon-large">⭐</div>
+                    <h3>Brand Positioning & Identity</h3>
+                    <p>Help with visual branding, messaging strategy, and social media positioning tailored specifically for the local Delhi NCR market.</p>
+                </div>
+                
+                <div class="service-detail-card">
+                    <div class="service-icon-large">👥</div>
+                    <h3>Staff Training & Performance Monitoring</h3>
+                    <p>Comprehensive training modules for sales teams and staff, plus dashboard creation for KPI tracking and performance optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Success Stories</h2>
+                <p>Real results from real businesses we've helped grow</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"RJR Consultancy transformed our gym from struggling to profitable in just 6 months. Their lead generation system increased our membership by 300%."</p>
+                        <div class="testimonial-author">
+                            <h4>Rajesh Kumar</h4>
+                            <p>FitZone Gym, Gurgaon</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The sales funnel they built for us automated our entire customer journey. We now get quality leads daily without constant manual effort."</p>
+                        <div class="testimonial-author">
+                            <h4>Priya Sharma</h4>
+                            <p>Wellness Café, Noida</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Their staff training program and performance tracking dashboard helped us scale from 50 to 200 students in one year. Incredible results!"</p>
+                        <div class="testimonial-author">
+                            <h4>Amit Singh</h4>
+                            <p>TechStart Academy, Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" onclick="prevTestimonial()">‹</button>
+                    <button class="slider-btn" onclick="nextTestimonial()">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Growth Insights & Resources</h2>
+                <p>Latest strategies and tips for business growth</p>
+            </div>
+            
+            <div class="blog-controls">
+                <input type="text" id="blog-search" class="form-control" placeholder="Search blog posts...">
+                <select id="blog-filter" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="Fitness Business">Fitness Business</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Business Strategy">Business Strategy</option>
+                </select>
+            </div>
+            
+            <div class="blog-grid" id="blog-grid">
+                <article class="blog-card" data-category="Fitness Business">
+                    <div class="blog-meta">
+                        <span class="blog-date">Apr 15, 2024</span>
+                        <span class="blog-category">Fitness Business</span>
+                    </div>
+                    <h3>5 Proven Strategies to Double Your Gym Membership</h3>
+                    <p>Learn the exact tactics we used to help fitness centers grow their membership base by 200-300% in the Delhi NCR market.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </article>
+                
+                <article class="blog-card" data-category="Digital Marketing">
+                    <div class="blog-meta">
+                        <span class="blog-date">Apr 20, 2024</span>
+                        <span class="blog-category">Digital Marketing</span>
+                    </div>
+                    <h3>WhatsApp Marketing for Local Businesses: Complete Guide</h3>
+                    <p>Discover how to leverage WhatsApp automation to nurture leads and convert prospects into paying customers for your local business.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </article>
+                
+                <article class="blog-card" data-category="Business Strategy">
+                    <div class="blog-meta">
+                        <span class="blog-date">Apr 25, 2024</span>
+                        <span class="blog-category">Business Strategy</span>
+                    </div>
+                    <h3>Building Trust in the Delhi NCR Market: A Local Business Guide</h3>
+                    <p>Essential strategies for establishing credibility and building lasting customer relationships in the competitive Delhi NCR business landscape.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Grow Your Business Together</h2>
+                <p>Multiple ways to get in touch and start your growth journey</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>📞 Phone</h4>
+                            <p>9599863263</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📧 Email</h4>
+                            <p>ixglobal012345@gmail.com</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📱 Instagram</h4>
+                            <p><a href="https://instagram.com/realjeetsingh" target="_blank">@realjeetsingh</a></p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📍 Service Area</h4>
+                            <p>Delhi NCR, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div id="map" style="height: 300px; position: relative;"></div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-section">
+                    <h3>Book Your Free Growth Audit</h3>
+                    <div class="hubspot-form-container">
+                        <iframe src="https://40uu66.share-na2.hsforms.com/2iH1L5O5IQ8qqtEUNnOG_tw" 
+                                width="100%" 
+                                height="500" 
+                                frameborder="0" 
+                                style="border-radius: 8px;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel (Hidden by default) -->
+    <div id="admin-panel" class="admin-panel hidden">
+        <div class="admin-header">
+            <h2>Admin Dashboard</h2>
+            <button id="admin-logout" class="btn btn--secondary">Logout</button>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-section">
+                <h3>Blog Management</h3>
+                <button id="add-blog" class="btn btn--primary">Add New Blog Post</button>
+                <div id="blog-list" class="admin-list">
+                    <!-- Blog posts will be populated here -->
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h3>Testimonial Management</h3>
+                <button id="add-testimonial" class="btn btn--primary">Add New Testimonial</button>
+                <div id="testimonial-list" class="admin-list">
+                    <!-- Testimonials will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Admin Login</h3>
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" id="login-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn--primary">Login</button>
+                    <button type="button" id="close-login" class="btn btn--secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919599863263" target="_blank" class="whatsapp-float">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <!-- Admin Access Button (Hidden) -->
+    <button id="admin-access" class="admin-access-btn hidden">Admin</button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
