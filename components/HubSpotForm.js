@@ -21,7 +21,7 @@ export default function HubSpotForm() {
 
       // Create and load HubSpot forms script
       const script = document.createElement('script')
-      script.src = 'https://js-na2.hsforms.net/forms/embed/243303486.js'
+      script.src = 'https://js.hsforms.net/forms/v2.js'
       script.async = true
       script.id = 'hs-script-loader'
       document.body.appendChild(script)
